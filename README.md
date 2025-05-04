@@ -226,105 +226,77 @@ Make sure to test the zip file and video before submitting to ensure they are co
  -->
 
 
-Abnormal File Vault
-A take-home assignment for Abnormal Security, this project is a secure and efficient file hosting platform designed to optimize storage using file deduplication, search capabilities, and storage space tracking.
+# Abnormal File Vault
 
-🔧 Tech Stack
-Frontend: React, TailwindCSS
+## Overview
 
-Backend: Django (Python)
+Abnormal File Vault is a secure and efficient file hosting application designed to store, manage, and search files while optimizing storage space and preventing duplication. The application leverages advanced features like File Deduplication, Search & Filtering, and is built using **React**, **Django**, and **Docker**.
 
-Database: SQLite (swap with PostgreSQL for production)
+This project demonstrates the use of AI-augmented development tools like **Cursor**, **Claude**, and **Copilot** to improve the development workflow.
 
-Containerization: Docker
+## Features
 
-AI Tools Used: GitHub Copilot, Cursor
+- **File Deduplication**: Prevents uploading duplicate files by maintaining references to already uploaded files.
+- **Search & Filtering**: Efficient file search and filtering to handle large datasets.
+- **Efficient File Storage**: Saves storage space by referencing duplicate files instead of re-uploading them.
+- **AI-Augmented Development**: Utilizes AI tools to enhance the development process and workflow.
 
-✨ Features
-✅ File Deduplication
-Files with identical content are stored only once.
+## Tech Stack
 
-Database tracks all users who uploaded the file.
+- **Frontend**: React.js
+- **Backend**: Django
+- **Containerization**: Docker
+- **AI Tools**: Cursor, Claude, Copilot
 
-Saves disk space and improves performance.
+## Getting Started
 
-🔍 Search & Filtering
-Search uploaded files by filename.
+### Prerequisites
 
-Filter by file type, date, or deduplication status.
+Before you begin, ensure you have the following installed:
 
-📊 Storage Optimization Tracker
-Tracks total storage space saved via deduplication.
+- **Node.js** (v16 or above) - For running the frontend.
+- **Python** (v3.7 or above) - For running the Django backend.
+- **Docker** - For containerization.
 
-Exposed via a backend API endpoint.
+### Installation
 
-🧠 AI-Assisted Development
-Used GitHub Copilot and Cursor to:
+#### 1. Clone the repository
 
-Scaffold components and views
-
-Autocomplete logic for deduplication
-
-Catch potential bugs during development
-
-🚀 Getting Started
-1. Clone the Repo
-git clone https://github.com/akshatjain5868/file-vault.git
+```bash
+git clone https://github.com/your-username/abnormal-file-vault.git
 cd abnormal-file-vault
-
-2. Setup with Docker (Recommended)
-Ensure Docker is installed, then run:
+```
+#### 2. Run with docker
+```bash
 docker-compose up --build
-Frontend will be available at http://localhost:3000
-Backend API at http://localhost:8000
+```
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+### 🗃️ Project Structure
+```bash
+abnormal-file-vault/
+├── backend/               # Django backend
+│   ├── vault/             # Core Django app
+│   ├── media/             # Uploaded files
+│   └── ...
+├── frontend/              # React frontend
+│   ├── src/
+│   └── ...
+├── docker-compose.yml
+└── README.md
+```
+### 🧠 What I Learned
+- Implementing file deduplication logic with hashing
+- Tracking system‑level storage savings using database metrics
+- Using AI‑assisted tools (Copilot, Cursor) for faster scaffolding and bug fixing
+- Full‑stack integration with Docker, React, and Django
+- Writing clean, modular code and REST APIs
 
-3. Run Without Docker (Optional)
-Backend (Django)
-bash
-Copy
-Edit
-cd backend  
-python -m venv venv  
-source venv/bin/activate  
-pip install -r requirements.txt  
-python manage.py migrate  
-python manage.py runserver  
-Frontend (React)
-bash
-Copy
-Edit
-cd frontend  
-npm install  
-npm start  
-🗃️ Folder Structure
-bash
-Copy
-Edit
-abnormal-file-vault/  
-├── backend/          # Django backend  
-│   ├── vault/        # Core app  
-│   └── ...  
-├── frontend/         # React frontend  
-│   └── ...  
-├── docker-compose.yml  
-└── README.md  
-📹 Walkthrough Video
-[Insert your video link here — YouTube, Loom, etc.]
-
-🧠 What I Learned
-Real-world backend design for scalable file uploads
-
-Efficient database modeling for deduplication
-
-Using AI tools responsibly to speed up development without losing quality
-
-End-to-end integration of Docker, React, and Django
-
-📝 License
+###📝 License
 This project is for demonstration and evaluation purposes only.
 No official affiliation with Abnormal Security.
 
-📬 Contact
-Akshat Jain
-📧 akshatjain58838@gmail.com
-🔗 https://www.linkedin.com/in/akshat2402
+###📬 Contact
+- Akshat Jain
+- 📧 akshatjain58838@gmail.com
+- 🔗 https://www.linkedin.com/in/akshat2402
